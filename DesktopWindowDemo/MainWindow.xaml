@@ -5,46 +5,46 @@
     xmlns:local="using:DesktopWindowDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-     xmlns:WinUI="using:WinUIExtensions.Desktop"     
+    xmlns:WinUI="using:WinUIExtensions.Desktop"     
     mc:Ignorable="d">
-
-
-    <StackPanel x:Name="MainGrid">
-
-        <!-- Uncomment it for using Custom Title Bar APIs-->
-        <!--<StackPanel Height="35" Orientation="Horizontal" 
+    <Window.SystemBackdrop>
+        <MicaBackdrop/>
+    </Window.SystemBackdrop>
+    <Grid x:Name="MainGrid">
+        <ScrollViewer>
+            <!-- Uncomment it for using Custom Title Bar APIs-->
+            <!--<StackPanel Height="35" Orientation="Horizontal" 
                     Spacing="15" x:Name="myTitleBar" HorizontalAlignment="Stretch" VerticalAlignment="Top" >
-            <Image Source="Assets/windowIcon.gif" />
-            <TextBlock VerticalAlignment="Center" Text="{x:Bind Title, Mode=OneTime}" />
-        </StackPanel>-->
+                <Image Source="Assets/windowIcon.gif" />
+                <TextBlock VerticalAlignment="Center" Text="{x:Bind Title, Mode=OneTime}" />
+            </StackPanel>-->
+            <StackPanel Margin="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Spacing="20" 
+                         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <TextBlock Text="Window Placement" />
+                <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
+                    <Button Content="Center" Click="OnCenterClick" HorizontalAlignment="Center" />
+                    <Button Content="TopLeft" Click="OnTopLeft" HorizontalAlignment="Center" />
+                    <Button Content="BottomLeft" Click="OnBottomLeft" HorizontalAlignment="Center" />
+                </StackPanel>
 
-        <StackPanel Margin="20" VerticalAlignment="Center" HorizontalAlignment="Left" Spacing="20" 
-                     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <TextBlock Text="Window Placement" />
-            <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
-                <Button Content="Center" Click="OnCenterClick" HorizontalAlignment="Center" />
-                <Button Content="TopLeft" Click="OnTopLeft" HorizontalAlignment="Center" />
-                <Button Content="BottomLeft" Click="OnBottomLeft" HorizontalAlignment="Center" />
+                <TextBlock Text="Window State" />
+                <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
+                    <Button Content="Maximize" Click="OnMaximize" HorizontalAlignment="Center" />
+                    <Button Content="Minimize" Click="OnMinimize" HorizontalAlignment="Center" />
+                    <Button Content="Restore" Click="OnRestore" HorizontalAlignment="Center" />
+                    <Button Content="BringToTop" Click="OnBringToTop" HorizontalAlignment="Center" />
+                </StackPanel>
+
+                <TextBlock Text="Closing Application" />
+                <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
+                    <Button Content="Close Application" Click="OnClosingApplication" HorizontalAlignment="Center" />
+                </StackPanel>
+
+                <TextBlock Text="" x:Name="debugTBox" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="" x:Name="systemTBox" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="" x:Name="dpiChangedTBox" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="" x:Name="preferredLanguageTBox" TextWrapping="WrapWholeWords"/>
             </StackPanel>
-
-            <TextBlock Text="Window State" />
-            <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
-                <Button Content="Maximize" Click="OnMaximize" HorizontalAlignment="Center" />
-                <Button Content="Minimize" Click="OnMinimize" HorizontalAlignment="Center" />
-                <Button Content="Restore" Click="OnRestore" HorizontalAlignment="Center" />
-                <Button Content="BringToTop" Click="OnBringToTop" HorizontalAlignment="Center" />
-            </StackPanel>
-
-            <TextBlock Text="Closing Application" />
-            <StackPanel Orientation="Horizontal" Spacing="20" Margin="20,0">
-                <Button Content="Close Application" Click="OnClosingApplication" HorizontalAlignment="Center" />
-            </StackPanel>
-
-            <TextBlock Text="" x:Name="debugTBox" TextWrapping="WrapWholeWords"/>
-            <TextBlock Text="" x:Name="systemTBox" TextWrapping="WrapWholeWords"/>
-            <TextBlock Text="" x:Name="dpiChangedTBox" TextWrapping="WrapWholeWords"/>
-            <TextBlock Text="" x:Name="preferredLanguageTBox" TextWrapping="WrapWholeWords"/>
-        </StackPanel>
-    </StackPanel>
+        </ScrollViewer>
+    </Grid>
 </WinUI:DesktopWindow>
-

@@ -15,7 +15,7 @@ namespace DesktopWindowDemo
             this.InitializeComponent();
             // MUX.Window features
             this.Title = "Showcase DesktopWindow API";
-            //this.ExtendsContentIntoTitleBar = true;
+            this.ExtendsContentIntoTitleBar = true;
             //SetTitleBar(myTitleBar);
 
             //DesktopWindow Features

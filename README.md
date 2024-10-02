@@ -1,8 +1,10 @@
 # Desktop Window
-This is just a sample of a .NET 5 APIs that extend the Microsoft.UI.Xaml.Window of WinUI 3 in Reunion 0.5
+This is just a sample of a .NET 8 APIs that extend the Microsoft.UI.Xaml.Window of WinUI 3 in Microsoft.WindowsAppSDK 1.x
 
 > This code is AS IS. It's just for demo proposals
 
+## Screenshot
+![DesktopWindowDemo](https://github.com/mcka-dev/DesktopWindow.WinUI/blob/master/Screenshots/DesktopWindowDemo.png?raw=true)
 
 XAML code snippet:
 ```XML

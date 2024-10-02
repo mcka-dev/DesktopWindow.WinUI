@@ -11,6 +11,9 @@
     <PublishProfile>Properties\PublishProfiles\win-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <!--Set <WindowsPackageType>None</WindowsPackageType> in your project file. In advanced scenarios, if you want control over the initialization, you can call the bootstrapper API directly in your app's startup code-->
+    <!--<WindowsPackageType>None</WindowsPackageType>-->
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\WinUI3.ico" />
